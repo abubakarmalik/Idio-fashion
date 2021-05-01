@@ -1,0 +1,75 @@
+/*---------------------------------------
+  Contact section              
+-----------------------------------------*/
+.parallax-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contact-info .fa {
+    padding-right: 5px;
+  }
+  
+  #contact .form-control {
+    border: none;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  #contact .form-control:focus {
+    border-bottom-color: #999999;
+  }
+  
+  #contact input {
+    height: 55px;
+  }
+  
+  #contact button#submit {
+    background: #2b2b2b;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    height: 50px;
+    margin-top: 24px;
+  }
+  
+  #contact button#submit:hover {
+    background: #414044;
+    color: #ffffff;
+  }
+  
+  
+  .alert {
+    padding: 7px;
+    background-color: #fff3cd;
+    color: black;
+  }
+  .alertsuccess {
+    padding: 7px;
+    background-color: #d1e7dd;
+    color: black;
+  }
+  .alertfail {
+    padding: 7px;
+    background-color: #f8d7da;
+    color: black;
+  }
+  .closebtn {
+    margin-left: 15px;
+    color: black;
+    float: right;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .closebtn:hover {
+    color: rgb(219, 89, 50);
+  }
+  

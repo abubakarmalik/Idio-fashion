@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Idio Fashion</title>
+    <link rel="icon" href="../public/images/logo.png">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black">
+        <div class="container">
+            <a class="lg" href="/"> <img src="../public/images/logo.png" alt="logo">
+            </a>
+            <a href="/" class="navbar-brand">Idio Fashion</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Men</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="/men_shirt">Shirts</a>
+                            <a href="/men_jean">Jeans</a>
+                            <a href="/men_shoes">Shoes</a>
+                            <a href="/men_accessry">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Women</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="/women_fabric">Fabric</a>
+                            <a href="/women_jewelry">Jewelry</a>
+                            <a href="/women_shoes">Shoes</a>
+                            <a href="/women_accessry">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Kids</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="/kid_outwear">Outwear</a>
+                            <a href="/kid_toys">Toys</a>
+                            <a href="/kid_shoes">Shoes</a>
+                            <a href="/kid_accessry">Accessories</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <% if( user ) {%>
+                        <div class="dropdown">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Hi <%= user.name %></a>
+                            </li>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Cart</a>
+                                <a href="/users/logout">Sign out</a>
+                            </div>
+                        </div>
+                        </li>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a href="/users/login" class="nav-link">Sign in</a>
+                            </li>
+                            <% } %>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End of NAv-->
+
+    <div class="container">
+        <h3 class="h3">Women Accessories</h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa1.jpg">
+                            <img class="pic-2" src="../public/images/wa1.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">SILKY SOFT LIPSTICK</a></h3>
+                        <div class="price">Rs 700</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa2.jpg">
+                            <img class="pic-2" src="../public/images/wa2.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">MINI PONI JEWEL SHINE LIPSTICK</a></h3>
+                        <div class="price">Rs 700</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa3.jpg">
+                            <img class="pic-2" src="../public/images/wa3.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">NAIL POLISH HOT CHILI</a></h3>
+                        <div class="price">Rs 400</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa4.jpg">
+                            <img class="pic-2" src="../public/images/wa4.1.jpg">
+                        </a>
+
+                        <ul class="social">
+
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">NAIL POLISH PURPLE</a></h3>
+                        <div class="price">Rs 400</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="h3"></h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa5.jpg">
+                            <img class="pic-2" src="../public/images/wa5.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#"> PROTECTION SUNGLASSES WOMEN</a></h3>
+                        <div class="price">Rs 2,100</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa6.jpg">
+                            <img class="pic-2" src="../public/images/wa6.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">MULTICOLOR WOMEN METAL FRAME</a></h3>
+                        <div class="price">Rs 1,991</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa7.jpg">
+                            <img class="pic-2" src="../public/images/wa7.1.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">ORANGE WOMEN BOWKNOT HAT</a></h3>
+                        <div class="price">Rs 2,768</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="../public/images/wa8.jpg">
+                            <img class="pic-2" src="../public/images/wa8.1.jpg">
+                        </a>
+
+                        <ul class="social">
+
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+
+
+
+                    </div>
+
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">SUN HAT COMFORT</a></h3>
+                        <div class="price">Rs 1,813</div>
+                        <a class="add-to-cart" href="#">+ Add To Cart</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Footer-->
+
+
+    <footer class="container-fluid bg-grey py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <h1>Idio Fashion</h1>
+                                <p>We have best store all over internet</p>
+                                <p>we have Best products , best price, Artificial Intiligence,
+                                    and much more</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6> About Company</h6>
+                            <p>We have best Team and best products.</p>
+                            <a href="#" class="btn-footer"> About us </a><br>
+                            <a href="/contact" class="btn-footer"> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6> Categories</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="#"> Home</a> </li>
+                                        <li> <a href="#"> Service</a> </li>
+                                        <li> <a href="#"> Men</a> </li>
+                                        <li> <a href="#"> Women</a> </li>
+                                        <li> <a href="#"> Kids</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="#"> Blog</a> </li>
+                                        <li> <a href="#"> Terms</a> </li>
+                                        <li> <a href="#"> Policy</a> </li>
+                                        <li> <a href="#"> Refunds</a> </li>
+                                        <li> <a href="#"> Paypal</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6> Newsletter</h6>
+                            <div class="social">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                            <form class="form-footer my-3" action="/newsletter" method="POST">
+                                <input type="text" required="true" placeholder="Newsletter" name="email">
+                                <input id="go-news" type="submit" value="Go">
+                            </form>
+                            <p>Copyright ©2021 All rights reserved Idio Fashion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

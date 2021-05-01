@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <title>Idio Fashion</title>
+    <link rel="icon" href="../public/images/logo.png">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/contact.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--Nav-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black">
+        <div class="container">
+            <a class="lg" href="/"> <img src="../public/images/logo.png" alt="logo"> </a>
+            <a href="/" class="navbar-brand">Idio Fashion</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Men</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="#">Shirts</a>
+                            <a href="#">Jeans</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Women</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="#">Fabric</a>
+                            <a href="#">Jewelry</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Kids</a>
+                        </li>
+                        <div class="dropdown-content">
+                            <a href="#">Outwear</a>
+                            <a href="#">Toys</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <% if( user ) {%>
+                        <div class="dropdown">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Hi <%= user.name %></a>
+                            </li>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Cart</a>
+                                <a href="/users/logout">Sign out</a>
+                            </div>
+                        </div>
+                        </li>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a href="/users/login" class="nav-link">Sign in</a>
+                            </li>
+                            <% } %>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End of NAv-->
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="parallax-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <!-- SECTION TITLE -->
+                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                        <h2>Contact us</h2>
+                        <p>Get in touch. our team is always here for your help !</p>
+                    </div>
+                </div>
+
+                <div class="col-md-7 col-sm-10">
+                    <!-- CONTACT FORM HERE -->
+                    <div class="wow fadeInUp" data-wow-delay="0.4s">
+                        <% if(success_msg !='' ){ %>
+                            <div class="alertsuccess">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                <%= success_msg %>
+                            </div>
+                            <% } %>
+                                <% if(error_msg !='' ){ %>
+                                    <div class="alertfail">
+                                        <span class="closebtn"
+                                            onclick="this.parentElement.style.display='none';">&times;</span>
+                                        <%= error_msg %>
+                                    </div>
+                                    <% } %>
+                                        <% if(error !='' ){ %>
+                                            <div class="alertfail">
+                                                <span class="closebtn"
+                                                    onclick="this.parentElement.style.display='none';">&times;</span>
+                                                <%= error %>
+                                            </div>
+                                            <% } %>
+                                                <form id="contact-form" action="/contact" method="POST">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" class="form-control" name="name"
+                                                            placeholder="Name" required="">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="email" class="form-control" name="email"
+                                                            placeholder="Email" required="">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" class="form-control" name="subject"
+                                                            placeholder="Subject" required="">
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <textarea class="form-control" rows="5" name="message"
+                                                            placeholder="Message" required=""></textarea>
+                                                    </div>
+                                                    <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
+                                                        <button id="submit" type="submit" class="form-control"
+                                                            name="submit">Send
+                                                            Message</button>
+                                                    </div>
+                                                </form>
+                    </div>
+                </div>
+
+                <div class="col-md-5 col-sm-8">
+                    <!-- CONTACT INFO -->
+                    <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
+                        <div class="section-title">
+                            <h2>Contact Info</h2>
+                            <p>Feel free too visit our office and may contact at any time office timing is (9am -6pm)
+                            </p>
+                        </div>
+
+                        <p><i class="fa fa-map-marker"></i>New Satellite Town, Sargodha </p>
+                        <p><i class="fa fa-comment"></i> <a href="#">Areejansari@gmail.com</a></p>
+                        <p><i class="fa fa-phone"></i> +92 306 8816053</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- END CONTACT SECTION -->
+
+    <!--Footer-->
+
+    <footer class="container-fluid bg-grey py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <h1>Idio Fashion</h1>
+                                <p>We have best store all over internet</p>
+                                <p>we have Best products , best price, Artificial Intiligence, and much more</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6> About Company</h6>
+                            <p>We have best Team and best products.</p>
+                            <a href="#" class="btn-footer"> About us </a><br>
+                            <a href="#" class="btn-footer"> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6> Categories</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="#"> Home</a> </li>
+                                        <li> <a href="#"> Service</a> </li>
+                                        <li> <a href="#"> Men</a> </li>
+                                        <li> <a href="#"> Women</a> </li>
+                                        <li> <a href="#"> Kids</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="#"> Blog</a> </li>
+                                        <li> <a href="#"> Terms</a> </li>
+                                        <li> <a href="#"> Policy</a> </li>
+                                        <li> <a href="#"> Refunds</a> </li>
+                                        <li> <a href="#"> Paypal</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6> Newsletter</h6>
+                            <div class="social">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                            <form class="form-footer my-3">
+                                <input type="text" placeholder="Newsletter" name="search">
+                                <input type="button" value="Go">
+                            </form>
+                            <p>Copyright ©2021 All rights reserved Idio Fashion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- End Footer-->
+</body>
+
+</html>
