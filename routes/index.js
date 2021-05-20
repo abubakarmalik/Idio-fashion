@@ -35,6 +35,11 @@ router.get('/kid_accessry', indexController.kaccess);
 //get single product
 router.get('/single_product', indexController.singleproduct);
 
+//get about page
+router.get('/about', indexController.about)
+
+//get cart page
+router.get('/cart', indexController.cart)
 
 
 

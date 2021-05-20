@@ -123,6 +123,12 @@ module.exports = {
     // get single product page
     singleproduct: (req, res) => res.render('single_product', { user: req.user }),
 
+    //get about page
+    about: (req, res) => res.render('about', { user: req.user }),
+
+    //get cart page
+    cart: (req, res) => res.render('cart', { user: req.user }),
+
 
 
 }

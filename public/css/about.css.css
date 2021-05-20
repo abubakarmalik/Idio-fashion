@@ -1,0 +1,17 @@
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+#ig {
+    border-radius: 50%;
+   }
+#p1{
+    text-align: justify;
+    /* text-justify: inter-word; */
+}
+.jstfy{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.w3-round{
+    margin-bottom: 16px;
+}
